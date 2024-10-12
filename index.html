@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./index.js"></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+  <header>
+    <div>
+      <!-- boton del ménu -->
+      <button id="btnMenu--toogle" aria-label="Open menu" aria-expanded="false">
+        <img id="iconBtn" src="./images/icon-menu.svg" alt="icon of menu">
+      </button>
+      <!-- Logo de la pagina -->
+      <picture>
+        <img src="./images/logo.svg" alt="logo of the page">
+      </picture>
+    </div>
+
+    <!-- Seccion del menú, este solo se verá en Escritorio y Tablet -->
+     <section class="menu__mobile" id="menu">
+      <nav>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+       </nav>
+     </section>
+
+    <!-- section del carrito de compras y el usuario -->
+    <section class="cart_user">
+      <button id="btn_cart" class="cart">
+        <div id="amount_product-cart">0</div>
+        <img src="./images/icon-cart.svg" alt="icon of the card">
+      </button>
+      <picture class="photo_user">
+        <img src="./images/image-avatar.png" alt="photo of user">
+      </picture>
+    </section>
+  </header>
+  <hr class="division"/>
+  <main>
+    <!-- Card que muestra los productos en el cart -->
+    <article class="card__cart" id="showCard">
+      <h2>Cart</h2>
+      <hr />
+      <div class="card__info-empty" id="card-info-empty">
+        <span>Your cart is empty.</span>
+      </div>
+      <div class="card__info" id="card-info-product">
+        <div class="product"> 
+          <img src="./images/image-product-1-thumbnail.jpg" alt="img of product">
+          <div>
+            <p>Fall Limited Edition Sneakers</p>
+            $<span id="card_price">125.00</span> x
+            <span id="card_amount_product"> 3</span>
+            <strong id="total_pay">$375.00</strong>
+          </div>
+          <button id="btn_delete">
+            <img src="./images/icon-delete.svg" alt="icon delete">
+          </button>
+        </div>
+        <button id="btn_checkout">Checkout</button>
+      </div>
+    </article>
+
+    <section class="container__slider-screen" id="slider-screen">
+      <div class="container-count-btnClose">
+        <span></span>
+        <div id="slider-counter-screen">1 /4</div>
+        <button id="closeSlider">
+          ×
+          <!-- <img src="./images/icon-close.svg" alt="button close"> -->
+        </button>
+      </div>
+      
+      <div class="slider-screen">
+        <img id="img_slider-screen" src="./images/image-product-1.jpg" alt="Slider image Screen full">
+      </div>
+      <button id="prev-btn-screen">
+        <img src="./images/icon-previous.svg" alt="icon previos for slider">
+      </button>
+      <button id="next-btn-screen">
+        <img src="./images/icon-next.svg" alt="icon next for slider">
+      </button>
+
+      <div class="container__slider-screen-small">
+        <div class="slider-screen-small" id="thumbnail1">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="">
+        </div>
+        <div class="slider-screen-small" id="thumbnail2">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="">
+        </div>
+        <div class="slider-screen-small" id="thumbnail3">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="">
+        </div>
+        <div class="slider-screen-small" id="thumbnail4">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="slider-container" id="slider-main">
+      <div class="slider">
+        <img id="slider-img" src="./images/image-product-1.jpg" alt="Slider image">
+      </div>
+      <div id="slider-counter">1 / 4</div>
+      <button id="prev-btn">
+        <img src="./images/icon-previous.svg" alt="icon previos for slider">
+      </button>
+      <button id="next-btn">
+        <img src="./images/icon-next.svg" alt="icon next for slider">
+      </button>
+
+      <div class="container__slider-small">
+        <div class="slider-small" id="thumbnailMain1">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="">
+        </div>
+        <div class="slider-small" id="thumbnailMain2">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="">
+        </div>
+        <div class="slider-small" id="thumbnailMain3">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="">
+        </div>
+        <div class="slider-small" id="thumbnailMain4">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="container__info">
+      <span class="company">Sneaker Company</span>
+
+      <h1>Fall Limited Edition Sneakers</h1>
+      
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+
+      <div class="container__price">
+        <span class="price__discount">$125.00</span>
+        <span class="discount">50%</span>
+        <del class="price">$250.00</del>
+      </div>
+    
+      <div class="container__amount">
+        <button id="btn-minus"><img src="./images/icon-minus.svg" alt="icon minus"></button>
+        <strong id="amount">0</strong>
+        <button id="btn-plus"><img src="./images/icon-plus.svg" alt="icon plus"></button>
+      </div>
+      
+      <!-- Button que agrega los productos al carrito de compras -->
+      <button id="btn_addCart"><span></span>Add to cart</button>
+
+    </section>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">J.J.MS</a>.
+    </div>
+  </footer>
+</body>
+</html>
